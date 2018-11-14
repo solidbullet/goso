@@ -1,7 +1,14 @@
-#ifndef _TEST_H_
-#define _TEST_H_
+#ifndef _TEST_H
+#define _TEST_H
 
-void TestA();
-void TestB();
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+extern void TestA();
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
