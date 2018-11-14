@@ -1,12 +1,5 @@
-1、生成so文件的命令：g++ test_a.cpp test_b.cpp -fPIC -shared -o libtest.so
+1 g++ -o test_a.o -c test_a.cpp
 
-2、生成.a文件的命令
-gcc -c test_a.cpp ;
-gcc -c test_b.cpp ;
-ar -r libtest.a test_a.o test_b.o
+2 ar r libc_test.so test_a.o 
 
-3、采用动态库编译命令:g++ test.cpp -o test -L. -ltest  //这一步就是把test.cpp 和libtest.so 文件合并成可执行文件。
-
-4、执行：export LD_LIBRARY_PATH=./
-
-5、最后： ./test
+3 go run main.go
